@@ -98,6 +98,26 @@ typedef struct s_ray
 	int		hit;
 }			t_ray;
 
+typedef struct s_ceiling_ray
+{
+	float	dir_x0;
+	float	dir_y0;
+    float	dir_x1;
+    float	dir_y1;
+	float	pos_z;
+	float	row_distance;
+	float	floor_step_x;
+	float	floor_step_y;
+	float	floor_x;
+	float	floor_y;
+	int		cell_x;
+	int		cell_y;
+	int		tx;
+	int		ty;
+	int		floor_texture;
+	int		ceiling_texture;
+}			t_ceiling_ray;
+
 typedef struct s_textures
 {
 	mlx_texture_t	*NO_path;
@@ -119,6 +139,7 @@ typedef struct s_game
 	mlx_t		*mlx;
 	mlx_image_t	*img;
 	t_textures	*textures;
+	t_ceiling_ray *ceiling_ray;
 }	t_game;
 
 //#Parsing//
@@ -233,5 +254,6 @@ int		get_pixel_index(t_game *game, mlx_texture_t *texture);
 // key_hooks.c
 void	key_pressed_function(mlx_key_data_t keydata, void *param);
 
+void	draw_ceiling_and_floor(t_game *game);
 
 #endif

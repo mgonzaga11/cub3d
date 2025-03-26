@@ -12,32 +12,6 @@
 
 #include "cub_3d.h"
 
-void	draw_ceiling_and_floor(t_game *game)
-{
-	int				i;
-	int				j;
-	unsigned int	ceiling;
-	unsigned int	floor;
-
-	i = 0;
-	j = 0;
-	ceiling = game->map->ceiling;
-	floor = game->map->floor;
-	while (i < WIDTH)
-	{
-		j = 0;
-		while (j < HEIGHT)
-		{
-			if (j < HEIGHT / 2)
-				mlx_put_pixel(game->img, i, j, ceiling);
-			else
-				mlx_put_pixel(game->img, i, j, floor);
-			j++;
-		}
-		i++;
-	}
-}
-
 int	init_structs_in_game(t_game *game)
 {
 	game->img = init_img(game);

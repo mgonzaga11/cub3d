@@ -30,7 +30,7 @@ FILES := main.c 01_init_game.c 02_init_structs.c init_player_struct.c init_mlx.c
 		parsing/character_mapvalidation.c parsing/check_argv.c parsing/map_validation.c \
 		parsing/parsing_content.c parsing/player_mapvalidation.c parsing/read_argv.c \
 		parsing/utils.c parsing/wall_mapvalidation.c get_content/get_info_map.c \
-		get_content/get_info_utils.c get_content/get_info.c 
+		get_content/get_info_utils.c get_content/get_info.c draw_ceiling_and_floor.c
 
 
 OBJ := $(FILES:.c=.o)
