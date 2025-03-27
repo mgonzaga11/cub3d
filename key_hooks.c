@@ -53,7 +53,6 @@ void	move_player_w(t_game *game)
 	{
 		game->player->pos_x = new_x;
 		game->player->pos_y = new_y;
-		render_raycast_frame(game);
 	}
 }
 
@@ -76,7 +75,6 @@ void	move_player_s(t_game *game)
 	{
 		game->player->pos_x = new_x;
 		game->player->pos_y = new_y;
-		render_raycast_frame(game);
 	}
 }
 
@@ -99,7 +97,6 @@ void	move_player_a(t_game *game)
 	{
 		game->player->pos_x = new_x;
 		game->player->pos_y = new_y;
-		render_raycast_frame(game);
 	}
 }
 
@@ -122,6 +119,5 @@ void	move_player_d(t_game *game)
 	{
 		game->player->pos_x = new_x;
 		game->player->pos_y = new_y;
-		render_raycast_frame(game);
 	}
 }

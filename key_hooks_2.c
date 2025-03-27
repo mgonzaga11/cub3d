@@ -29,7 +29,6 @@ void	move_player_vision_left(t_game *game)
 		* sin(-ROTATION_SPEED);
 	game->player->plane_y = old_plane_x * sin(-ROTATION_SPEED)
 		+ game->player->plane_y * cos(-ROTATION_SPEED);
-	render_raycast_frame(game);
 }
 
 void	move_player_vision_right(t_game *game)
@@ -49,5 +48,4 @@ void	move_player_vision_right(t_game *game)
 		* sin(ROTATION_SPEED);
 	game->player->plane_y = old_plane_x * sin(ROTATION_SPEED)
 		+ game->player->plane_y * cos(ROTATION_SPEED);
-	render_raycast_frame(game);
 }

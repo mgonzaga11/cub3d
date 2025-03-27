@@ -205,7 +205,7 @@ char	**get_color_split(char *string, int count);
 
 // init_game
 int		init_game(t_game *game);
-void		render_raycast_frame(t_game *game);
+void		render_raycast_frame(void *param);
 void		draw_walls_with_texture(int x, t_game *game);
 
 // init_mlx
